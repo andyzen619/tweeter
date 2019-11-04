@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/header.css" type="text/css">
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
-    </nav>
+        <span class="navTitle">tweeter</span>
 
+        <span class="navWriteATweet">Write <span class="navRegular">a new tweet</span>
+        </span>
+    </nav>
+    <header>
+        <div>
+            <img class="avatar" src="/images/profile-hex.png">
+        </div>
+        <div>
+            <h2 class="headerName"> <span class="headerFirstName">Andy </span> <span class="headerLastName">Liang</span></h2>
+        </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
-</html>
+    <main class="container">
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form method="POST" action="/tweets/" enctype="application/x-www-form-urlencoded">
+                <textarea class="tweetTextBox" name="text" placeholder="What are you humming about?"></textarea>
+                <div>
+                    <input class="tweetTweetButton" type="submit" value="Tweet">
+                    <span class="tweetTweetCounter" class="counter">140</span>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
