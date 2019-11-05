@@ -1,4 +1,4 @@
-.tweetTextBox {
+.newTweetTextBox {
     width: 100%;
     border: none;
     background-color: #f4f1ec;
@@ -7,7 +7,7 @@
     font-weight: bold;
 }
 
-.tweetTweetButton {
+.newTweetButton {
     position: absolute;
     left: 0;
     background-color: #4056A1;
@@ -17,7 +17,7 @@
     font-family: 'Bungee';
 }
 
-.tweetTweetCounter {
+.newTweetCharacterCounter {
     position: absolute;
     right: 0;
     padding: .50em;
