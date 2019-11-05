@@ -1,3 +1,7 @@
+.newTweetContainer {
+    position: relative;
+}
+
 .newTweetTextBox {
     width: 100%;
     border: none;

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css">
     <link rel="stylesheet" href="/styles/header.css" type="text/css">
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -40,8 +41,8 @@
         </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">
-        <section class="new-tweet">
+    <main>
+        <section class="newTweetContainer">
             <h2>Compose Tweet</h2>
             <form method="POST" action="/tweets/" enctype="application/x-www-form-urlencoded">
                 <textarea class="newTweetTextBox" name="text" placeholder="What are you humming about?"></textarea>
@@ -51,5 +52,14 @@
                 </div>
             </form>
         </section>
+
+        <section class="tweetsContainer">
+            <article class="tweetsArticle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </article>
+        </section>
+
     </main>
 </body>
