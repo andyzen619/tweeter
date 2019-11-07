@@ -17,13 +17,11 @@
     background-color: #4056A1;
     border-style: none;
     color: white;
-    padding: .50em;
     font-family: 'Bungee';
 }
 
 .newTweetCharacterCounter {
     position: absolute;
     right: 0;
-    padding: .50em;
     font-family: 'Bungee';
 }
