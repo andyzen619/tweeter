@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   const $navDropDown = $(".navDropDown");
   $navDropDown.on("click", function(e) {
-    $(".newTweetContainer").animate({ down: '250px;' });
+    $(".newTweetContainer").animate({ height: 'toggle' });
 
     // if (newTweetsContainer.css("display") === "none") {
     //   newTweetsContainer.css("display", "inline-block");

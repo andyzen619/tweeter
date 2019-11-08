@@ -37,4 +37,14 @@ nav {
     width: 40px;
     right: 9%;
     top: 50%;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+    animation-iteration-count: infinite;
+}
+
+.navDropDown:hover {
+    position: absolute;
+    width: 50px;
+    right: 9%;
+    top: 50%;
 }
