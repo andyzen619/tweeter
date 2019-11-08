@@ -1,6 +1,6 @@
 .newTweetContainer {
     position: relative;
-    /*display: none;*/
+    display: none;
     width: 98%;
 }
 
@@ -56,11 +56,11 @@
         top: 20px;
         width: 40%;
         color: red;
-        font-size: .75em;
+        font-size: .90em;
     }
     .newTweetsErrorMessageContainer {
         width: 100%;
-        height: 100px;
+        height: 75px;
         border-style: solid;
         border-color: red;
         margin-top: 2em;
