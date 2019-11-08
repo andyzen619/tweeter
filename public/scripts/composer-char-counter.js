@@ -1,12 +1,17 @@
 $(document).ready(function() {
-  // --- our code goes here ---
-  console.log("JQUERY has loaded in client.js");
 
-  $newTweetTextArea = $('.newTweetTextBox');
-  $newTweetCharacaterCounter = $('.newTweetCharacterCounter');
-  $newTweetTextArea.on('keydown', function() {
-    console.log(this);
-    let textLength = this.textLength;
-    $newTweetCharacaterCounter[0].textContent = 140 - textLength;
-  });
+  const countChar = function() {
+    $newTweetTextArea = $('.newTweetTextBox');
+    $newTweetCharacaterCounter = $('.newTweetCharacterCounter');
+    $newTweetTextArea.on('keydown', function() {
+      let textLength = 139 - this.textLength;
+      if (textLength >= 0) {
+        $newTweetCharacaterCounter[0].textContent = textLength;
+      } else {
+        $newTweetCharacaterCounter[0].textContent = 0;
+      }
+    });
+  };
+
+  countChar();
 })

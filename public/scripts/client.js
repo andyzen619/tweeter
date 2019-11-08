@@ -6,29 +6,11 @@
 
 $(document).ready(function() {
 
-  const initialTweets = [{
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  const escape = function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
   const createTweetElement = function(tweet) {
 
@@ -42,7 +24,7 @@ $(document).ready(function() {
                 <span class="tweetHeaderHandle">${tweet.user.handle}</span>
             </div>
             <div class="tweetsBody">
-                <p class="tweetsBodyText">${tweet.content.text}</p>
+                <p class="tweetsBodyText">${escape(tweet.content.text)}</p>
             </div>
             <div class="tweetsFooter">
                 <span class="tweetsFooterDaysPast">
@@ -61,8 +43,48 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
     for (tweet of tweets) {
-      $(".tweetsContainer").append(createTweetElement(tweet));
+      $(".tweetsContainer").prepend(createTweetElement(tweet));
     }
   }
-  renderTweets(initialTweets);
+
+  const $tweetSubmit = $("#tweetSubmit");
+  $tweetSubmit.submit(function(e) {
+    e.preventDefault();
+    const newTweetText = $(this).serialize();
+    const newTweetTextLength = newTweetText.length - 5;
+    if (newTweetTextLength <= 0 || newTweetTextLength > 140) {
+      alert("Tweet text size not valid, please resubmit Tweet");
+    } else {
+      $.ajax({
+        crossOrigin: true,
+        type: "POST",
+        url: "/tweets/",
+        data: $(this).serialize(),
+        success: function(data) {
+          loadTweets();
+        }
+      });
+    }
+  });
+
+  const loadTweets = function() {
+    $.ajax("/tweets/", {
+      type: "GET",
+    }).then(function(response) {
+      renderTweets(response);
+    });
+  }
+
+  loadTweets();
+
+  const $navDropDown = $(".navDropDown");
+  $navDropDown.on("click", function(e) {
+    $(".newTweetContainer").animate({ down: '250px;' });
+
+    // if (newTweetsContainer.css("display") === "none") {
+    //   newTweetsContainer.css("display", "inline-block");
+    // } else {
+    //   newTweetsContainer.css("display", "none");
+    // }
+  });
 });

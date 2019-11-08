@@ -31,6 +31,10 @@
 
         <span class="navWriteATweet">Write <span class="navRegular">a new tweet</span>
         </span>
+        <div>
+            <img class="navDropDown" src="https://img.icons8.com/flat_round/64/000000/down-right-arrow--v2.png">
+        </div>
+
     </nav>
     <header>
         <div>
@@ -44,7 +48,7 @@
     <main>
         <section class="newTweetContainer">
             <h2>Compose Tweet</h2>
-            <form method="POST" action="/tweets/" enctype="application/x-www-form-urlencoded">
+            <form method="POST" action="/tweets/" enctype="application/x-www-form-urlencoded" id="tweetSubmit">
                 <textarea class="newTweetTextBox" name="text" placeholder="What are you humming about?"></textarea>
                 <div>
                     <input class="newTweetButton" type="submit" value="Tweet">

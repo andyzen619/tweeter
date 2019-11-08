@@ -22,6 +22,7 @@ nav {
     font-weight: bold;
     position: absolute;
     right: 5%;
+    top: 10%;
     color: #FFFFFF;
 }
 
@@ -29,4 +30,11 @@ nav {
     font-family: 'Source Sans Pro';
     font-size: .75em;
     font-weight: normal;
+}
+
+.navDropDown {
+    position: absolute;
+    width: 40px;
+    right: 9%;
+    top: 50%;
 }
