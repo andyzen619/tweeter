@@ -25,3 +25,31 @@ header {
     top: 376px;
     font-size: 1.75em;
 }
+
+@media only screen and (min-width: 1024px) {
+    header {
+        height: 380px;
+        width: 30%;
+        position: absolute;
+        text-align: center;
+        top: 20%;
+        background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+        background-color: #a68500;
+        margin: 5%;
+        border-radius: 20%;
+    }
+    .headerFirstName {
+        font-family: 'Source Sans Pro';
+        font-weight: bold;
+    }
+    .headerLastName {
+        font-weight: normal;
+    }
+    .avatar {
+        top: 120px;
+    }
+    .headerName {
+        top: 376px;
+        font-size: 1em;
+    }
+}

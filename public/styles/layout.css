@@ -40,3 +40,21 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+@media only screen and (min-width: 1024px) {
+    body {
+        color: #ffffff;
+        background-color: #f4f1ec;
+        font-size: 24px;
+        font-family: 'Source Sans Pro';
+        text-align: left
+        /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+    main {
+        position: relative;
+        top: 100px;
+        color: grey;
+        width: 50%;
+        left: 45%;
+    }
+}

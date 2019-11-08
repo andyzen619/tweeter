@@ -11,7 +11,7 @@
     border-bottom: solid;
     border-width: thick;
     font-weight: bold;
-    padding-top: 5%;
+    margin-top: 5%;
 }
 
 .newTweetButton {
@@ -45,4 +45,26 @@
     top: 20px;
     width: 100px;
     color: red;
+}
+
+
+/* Desktop styles */
+
+@media only screen and (min-width: 1024px) {
+    .newTweetsErrorMessage {
+        position: relative;
+        top: 20px;
+        width: 40%;
+        color: red;
+        font-size: .75em;
+    }
+    .newTweetsErrorMessageContainer {
+        width: 100%;
+        height: 100px;
+        border-style: solid;
+        border-color: red;
+        margin-top: 2em;
+        text-align: center;
+        display: none;
+    }
 }

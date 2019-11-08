@@ -1,50 +1,100 @@
-nav {
-    position: fixed;
-    top: 0;
-    height: 120px;
-    width: 100%;
-    z-index: 1030;
-    background-color: #4056A1;
-    color: #FFFFFF;
-    padding: 1.5em
-}
-
-.navTitle {
-    font-family: 'Bungee';
-    font-size: 1.75em;
-    position: absolute;
-    left: 5%;
-}
-
-.navWriteATweet {
-    font-family: 'Source Sans Pro';
-    font-size: 1.5em;
-    font-weight: bold;
-    position: absolute;
-    right: 5%;
-    top: 10%;
-    color: #FFFFFF;
-}
-
-.navRegular {
-    font-family: 'Source Sans Pro';
-    font-size: .75em;
-    font-weight: normal;
-}
-
-.navDropDown {
-    position: absolute;
-    width: 40px;
-    right: 9%;
-    top: 50%;
-    -webkit-transition: width 2s;
-    transition: width 2s;
-    animation-iteration-count: infinite;
-}
-
-.navDropDown:hover {
-    position: absolute;
-    width: 50px;
-    right: 9%;
-    top: 50%;
-}
+    nav {
+        position: fixed;
+        top: 0;
+        height: 120px;
+        width: 100%;
+        z-index: 1030;
+        background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+        background-color: #a68500;
+        padding: 1.5em
+    }
+    
+    .navTitle {
+        font-family: 'Bungee';
+        font-size: 1.75em;
+        position: absolute;
+        left: 5%;
+    }
+    
+    .navWriteATweet {
+        font-family: 'Source Sans Pro';
+        font-size: 1.5em;
+        font-weight: bold;
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        color: #FFFFFF;
+    }
+    
+    .navRegular {
+        font-family: 'Source Sans Pro';
+        font-size: .75em;
+        font-weight: normal;
+    }
+    
+    .navDropDown {
+        position: absolute;
+        width: 40px;
+        right: 9%;
+        top: 50%;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        animation-iteration-count: infinite;
+    }
+    
+    .navDropDown:hover {
+        position: absolute;
+        width: 50px;
+        right: 9%;
+        top: 50%;
+    }
+    /* Desktop styles */
+    
+    @media only screen and (min-width: 1024px) {
+        nav {
+            position: fixed;
+            top: 0;
+            height: 120px;
+            width: 100%;
+            z-index: 1030;
+            background-color: #4056A1;
+            background-image: none;
+            color: #FFFFFF;
+            padding: 1.5em
+        }
+        .navTitle {
+            font-family: 'Bungee';
+            font-size: 1.75em;
+            position: absolute;
+            left: 5%;
+        }
+        .navWriteATweet {
+            font-family: 'Source Sans Pro';
+            font-size: 1.5em;
+            font-weight: bold;
+            position: absolute;
+            right: 5%;
+            top: 10%;
+            color: #FFFFFF;
+        }
+        .navRegular {
+            font-family: 'Source Sans Pro';
+            font-size: .75em;
+            font-weight: normal;
+        }
+        .navDropDown {
+            position: absolute;
+            width: 40px;
+            right: 9%;
+            top: 50%;
+            -webkit-transition: width 2s;
+            transition: width 2s;
+            animation-iteration-count: infinite;
+        }
+        .navDropDown:hover {
+            position: absolute;
+            width: 50px;
+            right: 9%;
+            top: 50%;
+        }
+    }
