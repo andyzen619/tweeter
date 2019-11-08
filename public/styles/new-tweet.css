@@ -12,6 +12,7 @@
     border-width: thick;
     font-weight: bold;
     margin-top: 5%;
+    outline: none;
 }
 
 .newTweetButton {

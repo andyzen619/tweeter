@@ -102,5 +102,6 @@ $(document).ready(function() {
   const $navDropDown = $(".navDropDown");
   $navDropDown.on("click", function(e) {
     $(".newTweetContainer").animate({ height: 'toggle' });
+    $(".newTweetTextBox").focus();
   });
 });
