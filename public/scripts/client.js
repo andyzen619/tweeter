@@ -6,12 +6,20 @@
 
 $(document).ready(function() {
 
+  /**
+   * An escape function that takes an html string and returns with no html tags
+   * @param {string} str 
+   */
   const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
 
+  /**
+   * Returns a article markup html that contain contents of tweet
+   * @param {*} tweet 
+   */
   const createTweetElement = function(tweet) {
 
     const tweetArticleMarkup = `
@@ -41,19 +49,37 @@ $(document).ready(function() {
     return tweetArticleMarkup;
   };
 
+  /**
+   * Renders the articles for a list of tweet objects and inserts them into the tweets container html
+   * @param {*} tweets 
+   */
   const renderTweets = function(tweets) {
     for (tweet of tweets) {
       $(".tweetsContainer").prepend(createTweetElement(tweet));
     }
   }
 
+  /**
+   * Loads all tweets onto tweets container html
+   */
+  const loadTweets = function() {
+    $.ajax("/tweets/", {
+      type: "GET",
+    }).then(function(response) {
+      renderTweets(response);
+    });
+  }
+
+  //Sets the submit ajax function to post a new tweet
   const $tweetSubmit = $("#tweetSubmit");
   $tweetSubmit.submit(function(e) {
     e.preventDefault();
     const newTweetText = $(this).serialize();
+
+    //Checks for correct formatting of text box when submitting new tweet.
     const newTweetTextLength = newTweetText.length - 5;
     if (newTweetTextLength <= 0 || newTweetTextLength > 140) {
-      alert("Tweet text size not valid, please resubmit Tweet");
+      $(".newTweetsErrorMessageContainer").slideDown();
     } else {
       $.ajax({
         crossOrigin: true,
@@ -64,27 +90,17 @@ $(document).ready(function() {
           loadTweets();
         }
       });
+      $(".newTweetTextBox").val("");
+      $(".newTweetCharacterCounter")["0"].textContent = 140;
+      $(".newTweetsErrorMessageContainer").slideUp();
     }
   });
 
-  const loadTweets = function() {
-    $.ajax("/tweets/", {
-      type: "GET",
-    }).then(function(response) {
-      renderTweets(response);
-    });
-  }
-
   loadTweets();
 
+  //Provides toggle down behaviour for the new tweet container when clicking on top right arrow.
   const $navDropDown = $(".navDropDown");
   $navDropDown.on("click", function(e) {
     $(".newTweetContainer").animate({ height: 'toggle' });
-
-    // if (newTweetsContainer.css("display") === "none") {
-    //   newTweetsContainer.css("display", "inline-block");
-    // } else {
-    //   newTweetsContainer.css("display", "none");
-    // }
   });
 });

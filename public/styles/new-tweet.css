@@ -11,6 +11,7 @@
     border-bottom: solid;
     border-width: thick;
     font-weight: bold;
+    padding-top: 5%;
 }
 
 .newTweetButton {
@@ -26,4 +27,22 @@
     position: absolute;
     right: 0;
     font-family: 'Bungee';
+}
+
+.newTweetsErrorMessageContainer {
+    width: 100%;
+    height: 75px;
+    border-style: solid;
+    border-color: red;
+    margin-top: 2em;
+    text-align: center;
+    display: none;
+}
+
+.newTweetsErrorMessage {
+    position: relative;
+    height: 100%;
+    top: 20px;
+    width: 100px;
+    color: red;
 }
