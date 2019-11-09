@@ -14,6 +14,11 @@
         font-size: 1.75em;
         position: absolute;
         left: 5%;
+        top: 20px;
+        bottom: 20x;
+        padding: 1%;
+        border-radius: 25px;
+        background-color: darkcyan;
     }
     
     .navWriteATweet {
@@ -24,6 +29,9 @@
         right: 5%;
         top: 10%;
         color: #FFFFFF;
+        background-color: darkcyan;
+        border-radius: 25px;
+        padding: 10px;
     }
     
     .navRegular {
@@ -75,7 +83,7 @@
             position: absolute;
             right: 5%;
             top: 10%;
-            color: #FFFFFF;
+            color: #FFFFFF
         }
         .navRegular {
             font-family: 'Source Sans Pro';
