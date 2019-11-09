@@ -36,6 +36,8 @@
         </div>
 
     </nav>
+
+    <!-- Main header contain profile and avatar-->
     <header>
         <div>
             <img class="avatar" src="/images/profile-hex.png">
@@ -53,6 +55,8 @@
                 <span class="newTweetsErrorMessage">"Tweet text size not valid, please resubmit Tweet"</span>
                 <span class="newTweetsErrorMessage"><img src="https://img.icons8.com/officel/30/000000/warning-shield.png"></span>
             </div>
+
+            <!--New tweet submission-->
             <form method="POST" action="/tweets/" enctype="application/x-www-form-urlencoded" id="tweetSubmit">
                 <textarea class="newTweetTextBox" name="text" placeholder="What are you humming about?"></textarea>
                 <div>
@@ -62,6 +66,7 @@
             </form>
         </section>
 
+        <!--Container to hold all tweets, filled by client.js-->
         <section class="tweetsContainer">
         </section>
 

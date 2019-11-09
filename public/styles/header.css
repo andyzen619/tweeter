@@ -8,6 +8,9 @@ header {
     background-color: #a68500;
 }
 
+
+/*Header name style*/
+
 .headerFirstName {
     font-family: 'Source Sans Pro';
     font-weight: bold;
@@ -17,14 +20,20 @@ header {
     font-weight: normal;
 }
 
-.avatar {
-    top: 120px;
-}
-
 .headerName {
     top: 376px;
     font-size: 1.75em;
 }
+
+
+/*Header avatar style*/
+
+.avatar {
+    top: 120px;
+}
+
+
+/*Desktop style*/
 
 @media only screen and (min-width: 1024px) {
     header {

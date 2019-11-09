@@ -14,6 +14,9 @@
     margin-bottom: 50px;
 }
 
+
+/*Tweet article header styles*/
+
 .tweetsHeader {
     position: relative;
     height: 75px;
@@ -46,6 +49,9 @@
     display: none;
 }
 
+
+/*Tweet article body styles*/
+
 .tweetsBody {
     position: absolute;
     bottom: 20%;
@@ -68,6 +74,9 @@
     overflow-wrap: break-word;
     outline: none;
 }
+
+
+/*Tweet article footer styles*/
 
 .tweetsFooter {
     position: absolute;
@@ -99,6 +108,9 @@
     bottom: 4px;
 }
 
+
+/*Tweet article hover styles*/
+
 .tweetsArticle:hover {
     box-shadow: 0 0 11px rgba(53, 53, 53, .7);
     font-weight: bolder;
@@ -115,6 +127,9 @@
 .tweetsContainer :hover .tweetsBodyText {
     font-weight: bolder;
 }
+
+
+/*Desktop styles*/
 
 @media only screen and (min-width: 1024px) {
     .tweetsFooterButtonContainer {

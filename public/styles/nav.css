@@ -8,6 +8,7 @@
         background-color: #a68500;
         padding: 1.5em
     }
+    /*Nav main title style*/
     
     .navTitle {
         font-family: 'Bungee';
@@ -20,6 +21,7 @@
         border-radius: 25px;
         background-color: darkcyan;
     }
+    /*Nav new tweet styles*/
     
     .navWriteATweet {
         font-family: 'Source Sans Pro';
@@ -49,6 +51,7 @@
         transition: width 2s;
         animation-iteration-count: infinite;
     }
+    /*Nav dropdown button hover style*/
     
     .navDropDown:hover {
         position: absolute;

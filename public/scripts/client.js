@@ -22,6 +22,8 @@ $(document).ready(function() {
    */
   const createTweetElement = function(tweet) {
 
+    //Creates html marlup to inject into tweet container as article
+
     const tweetArticleMarkup = `
         <article class="tweetsArticle">
             <div class="tweetsHeader">
@@ -81,6 +83,7 @@ $(document).ready(function() {
     if (newTweetTextLength <= 0 || newTweetTextLength > 140) {
       $(".newTweetsErrorMessageContainer").slideDown();
     } else {
+      //Ajax request for post route for creating new tweets
       $.ajax({
         crossOrigin: true,
         type: "POST",
@@ -90,6 +93,8 @@ $(document).ready(function() {
           loadTweets();
         }
       });
+
+      //Resets new tweet text box, counter, and error message
       $(".newTweetTextBox").val("");
       $(".newTweetCharacterCounter")["0"].textContent = 140;
       $(".newTweetsErrorMessageContainer").slideUp();

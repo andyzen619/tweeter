@@ -1,3 +1,5 @@
+/* css styles for  main tweet container */
+
 .newTweetContainer {
     position: relative;
     display: none;
@@ -41,6 +43,9 @@
     text-align: center;
     display: none;
 }
+
+
+/*style for error handling message when invalid tweet is submited*/
 
 .newTweetsErrorMessage {
     position: relative;
