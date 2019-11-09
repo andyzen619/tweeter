@@ -48,18 +48,25 @@
 
 .tweetsBody {
     position: absolute;
-    height: 120px;
+    bottom: 20%;
+    height: 30%;
     border-bottom: solid;
     width: 90%;
     left: 5%;
     right: 5%;
     font-weight: normal;
     text-align: left;
+    word-break: break-all
 }
 
 .tweetsBodyText {
     position: relative;
-    top: 25%;
+    width: 100%;
+    background: transparent;
+    border-style: none;
+    height: 80%;
+    overflow-wrap: break-word;
+    outline: none;
 }
 
 .tweetsFooter {

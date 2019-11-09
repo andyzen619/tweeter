@@ -32,7 +32,7 @@ $(document).ready(function() {
                 <span class="tweetHeaderHandle">${tweet.user.handle}</span>
             </div>
             <div class="tweetsBody">
-                <p class="tweetsBodyText">${escape(tweet.content.text)}</p>
+                <textarea readonly class="tweetsBodyText">${escape(tweet.content.text)}</textarea>
             </div>
             <div class="tweetsFooter">
                 <span class="tweetsFooterDaysPast">

@@ -1,5 +1,5 @@
 header {
-    height: 400px;
+    height: 520px;
     width: 100%;
     position: absolute;
     text-align: center;
@@ -28,7 +28,7 @@ header {
 
 @media only screen and (min-width: 1024px) {
     header {
-        height: 380px;
+        height: 420px;
         width: 30%;
         position: absolute;
         text-align: center;
@@ -46,7 +46,8 @@ header {
         font-weight: normal;
     }
     .avatar {
-        top: 120px;
+        top: 420px;
+        margin-top: 10%;
     }
     .headerName {
         top: 376px;

@@ -30,7 +30,7 @@ body {
 
 main {
     position: absolute;
-    top: 520px;
+    top: 63%;
     left: 5%;
     right: 5%;
     color: grey
@@ -52,9 +52,9 @@ main {
     }
     main {
         position: relative;
-        top: 100px;
+        top: 120px;
         color: grey;
-        width: 50%;
-        left: 45%;
+        width: 58%;
+        left: 40%;
     }
 }
