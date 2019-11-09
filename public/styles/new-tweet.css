@@ -18,10 +18,12 @@
 .newTweetButton {
     position: absolute;
     left: 0;
-    background-color: #4056A1;
+    background-color: darkcyan;
     border-style: none;
     color: white;
     font-family: 'Bungee';
+    border-radius: 25px;
+    padding: 15px;
 }
 
 .newTweetCharacterCounter {
