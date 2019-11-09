@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Tweeter: desktop mode"](https://github.com/andyzen619/Tiny-App/blob/master/resources/urls-create-url.png)
-!["Tweeter: mobile mode"](https://github.com/andyzen619/Tiny-App/blob/master/resources/urls-login.png)
-!["Tweeter: error handling"](https://github.com/andyzen619/Tiny-App/blob/master/resources/urls-my-urls.png)
+!["Tweeter: desktop mode"](https://github.com/andyzen619/tweeter/blob/master/public/images/tweeter-desktop-mode.png)
+!["Tweeter: mobile mode"](https://github.com/andyzen619/tweeter/blob/master/public/images/tweeter-mobile-mode.png)
+!["Tweeter: error handling"](https://github.com/andyzen619/tweeter/blob/master/public/images/tweeter-mobile-error-handling.png)
 
 ## Getting Started
 
