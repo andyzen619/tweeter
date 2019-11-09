@@ -85,8 +85,10 @@
 .tweetsFooterButtonContainer {
     position: absolute;
     width: 100px;
-    height: 10px;
+    height: 25px;
     right: 5%;
+    background-color: darkcyan;
+    border-radius: 25px;
 }
 
 .tweetsFooterButton {
@@ -94,6 +96,7 @@
     width: 15px;
     height: 15px;
     bottom: .5em;
+    bottom: 4px;
 }
 
 .tweetsArticle:hover {
@@ -111,4 +114,23 @@
 
 .tweetsContainer :hover .tweetsBodyText {
     font-weight: bolder;
+}
+
+@media only screen and (min-width: 1024px) {
+    .tweetsFooterButtonContainer {
+        position: absolute;
+        width: 100px;
+        height: 25px;
+        right: 5%;
+        background-color: darkcyan;
+        border-radius: 25px;
+    }
+    .tweetsFooterButton {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        bottom: .5em;
+        left: 20px;
+        bottom: 4px;
+    }
 }
